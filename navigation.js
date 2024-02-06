@@ -9,9 +9,12 @@ const Stack = createNativeStackNavigator();
 const Navigation = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Home-screen" component={HomeScreen} />
-                <Stack.Screen name="Resturant-screen" component={RestaurantScreen} />
+            {/* This is to hide the page name shown */}
+            <Stack.Navigator screenOptions={{
+                headerShown: false
+            }}>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Restaurant" component={RestaurantScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )
