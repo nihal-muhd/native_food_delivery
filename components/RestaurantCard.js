@@ -4,6 +4,7 @@ import { MapPin } from "react-native-feather"
 
 const RestaurantCardComponent = ({ ...item }) => {
     const navigation = useNavigation()
+    console.log(item.imgUrl);
     return (
         <TouchableOpacity onPress={() => navigation.navigate('Restaurant', { ...item })}>
             <View className="mr-6 bg-white rounded-3xl shadow-lg shadow-orange-500">
