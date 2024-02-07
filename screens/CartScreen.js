@@ -2,10 +2,11 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { ArrowLeft, Minus } from 'react-native-feather'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { useSelector } from 'react-redux'
 
 const CartScreen = () => {
     const navigation = useNavigation()
+    const items = useSelector(store => store.cart.items)
     return (
         // <SafeAreaView className='bg-white'>
         <View className=" bg-white flex-1 mt-5">
