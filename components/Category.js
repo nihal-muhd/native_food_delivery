@@ -1,9 +1,13 @@
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { categories } from "../constants";
 
 const CategoryComponent = () => {
     const [activeCategory, setActiveCategory] = useState(null);
+    useEffect(() => {
+        getCategories()
+    })
+    const getCategories = async () => { }
     return (
         <View className='mt-4 '>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} className='overflow-visible' contentContainerStyle={{ paddingHorizontal: 15 }}>
